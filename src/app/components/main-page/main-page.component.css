@@ -1,6 +1,15 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
 .title {
     text-align: center;
 }
+
+hr {
+    margin-bottom: 2rem;
+} 
 
 .cards {
     display: flex;
@@ -15,6 +24,16 @@
 
 .page_buttons {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 1rem 2rem;
+}
+
+.page_buttons button {
+    background-color: rgb(23, 127, 218);
+    color: #ffffff;
+    font-size: 24px;
+    border-radius: 10px;
+    border: none;
+    padding: .5rem 1rem;
+    font-weight: bold;
 }

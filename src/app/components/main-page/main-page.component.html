@@ -1,4 +1,5 @@
 <h1 class="title">POKEDÉX</h1>
+<hr>
 <div class="cards">
   <ng-container *ngFor="let results of pokemonList">
     <app-card class="pokemons" [pokemonName]="results.name" (click)="navigateToPokemonDetail(results.name)"></app-card>

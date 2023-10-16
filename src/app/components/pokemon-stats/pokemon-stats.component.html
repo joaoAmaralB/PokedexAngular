@@ -4,6 +4,7 @@
   <h1 class="pokemon-name">{{ pokemonStats.name }}</h1>
 
   <img
+    [ngClass]="pokemonStats.types[0].type.name"
     class="pokemon-image"
     [src]="pokemonStats.sprites.front_default"
     alt="{{ pokemonStats.name }} image"
@@ -11,10 +12,10 @@
 
   <div class="details">
       <ul class="pokemon-types">
-        <li *ngFor="let t of pokemonStats.types">{{ t.type.name }}</li>
+        <li [ngClass]="t.type.name" class="types" *ngFor="let t of pokemonStats.types">{{ t.type.name }}</li>
       </ul>
     
-      <p>{{ pokemonStats.weight }}</p>
+      <p>{{ pokemonStats.weight }} Kg</p>
   </div>
 
   <ul class="pokemon-stats">
@@ -24,6 +25,6 @@
   </ul>
 
   <ul class="pokemon-abilities">
-    <li *ngFor="let a of pokemonStats.abilities">{{ a.ability.name }}</li>
+    <li class="abilities" [ngClass]="pokemonStats.types[0].type.name" *ngFor="let a of pokemonStats.abilities">{{ a.ability.name }}</li>
   </ul>
 </div>
