@@ -1,0 +1,20 @@
+.title {
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.pokemons {
+    margin-bottom: 1rem;
+}
+
+.page_buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}

@@ -1,0 +1,11 @@
+<h1 class="title">POKEDÉX</h1>
+<div class="cards">
+  <ng-container *ngFor="let results of pokemonList">
+    <app-card class="pokemons" [pokemonName]="results.name" (click)="navigateToPokemonDetail(results.name)"></app-card>
+  </ng-container>
+</div>
+
+<div class="page_buttons">
+  <button (click)="backPage()">BACK</button>
+  <button (click)="nextPage()">NEXT</button>
+</div>

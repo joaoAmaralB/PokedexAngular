@@ -1,0 +1,29 @@
+<button (click)="goBackToMenu()">BACK TO MENU</button>
+
+<div class="stats__container">
+  <h1 class="pokemon-name">{{ pokemonStats.name }}</h1>
+
+  <img
+    class="pokemon-image"
+    [src]="pokemonStats.sprites.front_default"
+    alt="{{ pokemonStats.name }} image"
+  />
+
+  <div class="details">
+      <ul class="pokemon-types">
+        <li *ngFor="let t of pokemonStats.types">{{ t.type.name }}</li>
+      </ul>
+    
+      <p>{{ pokemonStats.weight }}</p>
+  </div>
+
+  <ul class="pokemon-stats">
+    <li *ngFor="let s of pokemonStats.stats">
+      {{ s.stat.name }}: {{ s.base_stat }}
+    </li>
+  </ul>
+
+  <ul class="pokemon-abilities">
+    <li *ngFor="let a of pokemonStats.abilities">{{ a.ability.name }}</li>
+  </ul>
+</div>
