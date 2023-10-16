@@ -3,8 +3,16 @@
     box-sizing: border-box;
 }
 
+.title__container {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+
 .title {
     text-align: center;
+    margin-left: 1rem;
 }
 
 hr {
